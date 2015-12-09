@@ -1,0 +1,24 @@
+{{ define "index" }}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>API</title>
+</head>
+<body>
+	<div id="wrapper">
+		<h1>HELLO INDEX</h1>
+		<h2>Possible requests:</h2>
+		<p>localhost:4000/user.create?login=yourLogin&pass=yourPassword&age=yourAge</p>
+		<p>localhost:4000/user.delete?id=yourId</p>
+		<a href="/reg">Registration form</a>
+		<p>___________________________________________________________________</p>
+		{{ range $value := . }}
+		<div>
+			<p>ID: {{ $value.Id }} LOGIN: {{ $value.Login }} PASSWORD: {{ $value.Password }} AGE: {{ $value.Age }} <a href="/user.delete?id={{$value.Id}}">Click for delete</a></p>
+		</div>
+		{{ end }}
+	</div>
+</body>
+</html>
+{{ end }}
