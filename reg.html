@@ -1,0 +1,28 @@
+{{ define "reg" }}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>API</title>
+</head>
+<body>
+	<div id="wrapper">
+		<form action="/user.create" method="POST">
+			<div class="form-group">
+				<label>Login</label>
+				<input type="text" class="form-control" id="login" name="login" value="" />
+			</div>
+			<div class="form-group">
+				<label>Password</label>
+				<input type="text" class="form-control" id="password" name="password" value="" />
+			</div>
+			<div class="form-group">
+				<label>Age</label>
+				<input type="text" class="form-control" id="age" name="age"  value="" />
+			</div>
+			<button type="submit" class="btn btn-default">Submit</button>
+		</form>
+	</div>
+</body>
+</html>
+{{ end }}
